@@ -1,0 +1,22 @@
+---
+  solver: 'cvxpy'
+  state_dim: 3
+  brownian_motion_dim: 3
+  state_vars:
+    - 'x'
+    - 'v'
+    - 't'
+  initial_conditions: [1.0, -2.0, -7.456]
+  safe_set: 
+    - '-1.1x^2*v^0*t^0 + 2.2x^1*v^0*t^0'
+    - '-3.3x^0*v^0*t^2 + 4.4x^0*v^0*t^1'
+  safe_set_boundary:
+    - '-2.1x^2*v^0*t^0 + 4.3x^1*v^0*t^0 + -2.8x^0*v^0*t^2 + 5.1x^0*v^0*t^1'
+  drift:
+    x: '-6.9x^0*v^3*t^0 + -5.0x^1*v^2*t^1'
+    v: '1.0x^1*v^2*t^0'
+    t: '1.0x^0*v^0*t^0'
+  diffusion:
+    x: '1.0x^0*v^0*t^0 ; 5.9x^1*v^1*t^1 ; 0x^0*v^0*t^0'
+    v: '-92.1x^0*v^0*t^0 + 1.0x^1*v^1*t^1 ; 5.9x^1*v^1*t^1 ; 0x^0*v^0*t^0'
+    t: '100.0x^0*v^0*t^0 ; 0.0x^0*v^0*t^0 ; 0.0x^0*v^0*t^0'

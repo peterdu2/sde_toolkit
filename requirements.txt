@@ -1,0 +1,4 @@
+cvxpy >= 1.1.15
+numpy
+matplotlib
+pyyaml

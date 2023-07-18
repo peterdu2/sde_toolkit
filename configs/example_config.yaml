@@ -1,0 +1,14 @@
+---
+solver: 'scs'                           # CVXPY supported solver
+K: 8                                    # Maxmimum moment degree of optimization
+mode: 'maximize'                        # Compute upper bound (maximize) or lower bound (minimize)
+exit_time_moments: [1, 2, 3, 4, 5, 6]   # List of exit time moments to compute
+
+model_filename: 'brownian_motion.yaml'
+model_path: 'models/'
+
+optional_solver_params:                 # Optional solver specific parameters
+  solver_eps: 0.0001
+  solver_ac: 10
+  solver_scale: 10
+  solver_max_iters: 20000000
